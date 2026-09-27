@@ -5,10 +5,18 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 public class PraktikumTest {
+
+    @Test
+    public void testPraktikumConstructor() {
+        // Покрываем неявный публичный конструктор класса Praktikum
+        Praktikum praktikum = new Praktikum();
+        assertNotNull(praktikum);
+    }
 
     @Test
     public void testMainRunsWithoutErrorsAndPrintsReceipt() {
